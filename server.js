@@ -3,6 +3,7 @@ var cors = require('cors');
 
 const categories = require('./modules/categories');
 const trafics = require('./modules/trafics');
+const statistics = require('./modules/statistics')
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get('/', (_req, res) => {
 
 app.use('/categories', categories);
 app.use('/trafics', trafics);
+app.use('/statistics', statistics)
 
 /*
 app.get('/kategories', (req, res) => {
