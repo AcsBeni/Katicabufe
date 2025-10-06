@@ -1,0 +1,4 @@
+###Get statistics
+
+GET http://localhost:3000/statistics
+Content-Type: application/json

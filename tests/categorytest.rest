@@ -1,0 +1,39 @@
+###get kategories
+
+GET http://localhost:3000/categories
+Content-Type: application/json
+
+
+
+
+### Get one kategory by id
+
+GET http://localhost:3000/categories/3
+Content-Type: application/json
+
+### Delete one kategory by id
+
+DELETE http://localhost:3000/categories/4
+Content-Type: application/json
+
+### Post kategories
+
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+    "nev": "Desszertek"
+}
+
+
+
+
+### Patch kategory by id
+
+PATCH http://localhost:3000/categories/1
+Content-Type: application/json
+
+{
+    "nev": "Ételek"
+}
+

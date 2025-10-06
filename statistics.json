@@ -1,0 +1,52 @@
+
+[{
+    "UserCount":16,
+    "productsCount":3,
+    "salesSum":30,
+    "PriceSum":71600,
+    "products":[
+        {
+            "product":"Főtt virsli",
+            "count":2,
+            "price":990
+        },
+        {
+            "product": "Gyrostál",
+            "count": 5,
+            "price": 7500
+        },
+        {
+            "product": "Ízes palacsinta",
+            "count":2,
+            "price":700
+        },
+        {
+            "product":"Kenyér",
+            "count":2,
+            "price":120
+        },
+        {
+            "product":"Limonádé",
+            "count": 5,
+            "price": 100
+        },
+        {
+            "product":"Málnaszörp",
+            "count":4,
+            "price":100
+        },
+        {
+            "product":"Túrós palacsinta",
+            "count":1,
+            "price":270
+        }
+    ]
+}]
+    
+    
+    
+
+
+
+
+

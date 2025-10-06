@@ -1,0 +1,30 @@
+{
+  "name": "katicabufe-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcsBeni/Katicabufe.git"
+  },
+  "author": "AB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AcsBeni/Katicabufe/issues"
+  },
+  "homepage": "https://github.com/AcsBeni/Katicabufe#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.10",
+    "router": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.10"
+  }
+}
