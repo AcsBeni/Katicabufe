@@ -6,7 +6,7 @@ const trafics = require('./modules/trafics');
 const statistics = require('./modules/statistics')
 
 const app = express();
-
+//npm i dotenv
 // Middleware-ek
 app.use(cors());
 app.use(express.json());
@@ -39,8 +39,8 @@ app.get('/trafics', (req, res) => {
 });
 */
 
-app.listen(3000, () => {
-    console.log(`Server listening on http://localhost:3000`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on http://localhost:${process.env.PORT}`);
 });
 
 

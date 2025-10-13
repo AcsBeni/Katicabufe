@@ -1,6 +1,6 @@
 ###get traffiec
 
-GET http://localhost:3000/traffics
+GET http://localhost:3000/trafics
 Content-Type: application/json
 
 
