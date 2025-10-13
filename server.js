@@ -7,6 +7,16 @@ const statistics = require('./modules/statistics')
 
 const app = express();
 //npm i dotenv
+/*
+DBHOST=localhost
+DBUSER=root
+DBPASS=
+DBNAME=2025_katicabufe
+
+
+PORT=3000
+ 
+ */
 // Middleware-ek
 app.use(cors());
 app.use(express.json());
