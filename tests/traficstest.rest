@@ -15,7 +15,7 @@ Content-Type: application/json
 GET http://localhost:3000/trafics/3
 Content-Type: application/json
 
-### Post kategories
+### Post traific
 
 POST http://localhost:3000/trafics
 Content-Type: application/json
@@ -24,9 +24,10 @@ Content-Type: application/json
     "termek": "Lángos",
     "vevo": "Lajos",
     "kategoriaId": 1,
-    "egyeseg" : ,
-    "mennyiseg":,
-    "kiadva":
+    "egyseg" :3 ,
+    "mennyiseg":3,
+    "nettoar": 9,
+    "kiadva":1
 }
 
 
