@@ -24,8 +24,8 @@ router.get('/:id',(req, res)=>{
 // Post new category
 router.post('/', (req, res) => {
     console.log(req.body)
-    const { nev } = req.body;
-    pool.query(`INSERT INTO kategoria (kategoriaNev) VALUES (?)`,[nev], (error, results) => {
+    const { categoryName } = req.body;
+    pool.query(`INSERT INTO kategoria (categoryName) VALUES (?)`,[categoryName], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         res.status(200).json(results);
     });
@@ -34,8 +34,8 @@ router.post('/', (req, res) => {
 // Update category
 router.patch('/:id',(req, res)=>{
     let id = req.params.id;
-    const {nev} = req.body;
-    pool.query(`UPDATE kategoria SET kategoriaNev =? WHERE id=?`,[nev, id], (error, results)=>{
+    const {categoryName} = req.body;
+    pool.query(`UPDATE kategoria SET categoryName =? WHERE id=?`,[categoryName, id], (error, results)=>{
         if(error) return res.status(500).json({errno: error.errno, msg: "Hiba történt :("}) ;
         res.status(200).json()
     })
