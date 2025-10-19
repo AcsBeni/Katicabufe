@@ -37,10 +37,11 @@ PATCH http://localhost:3000/trafics/247
 Content-Type: application/json
 
 {
-     "termek": "Lángos",
+    "termek": "Lángos",
     "vevo": "Lajos",
     "kategoriaId": 1,
-    "egyeseg" :3 ,
+    "egyeseg" : "db" ,
+    "nettoar": 9,
     "mennyiseg":3,
     "kiadva":1
 }

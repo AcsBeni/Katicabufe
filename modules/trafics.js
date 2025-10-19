@@ -33,8 +33,8 @@ router.post('/', (req, res) => {
 // Update trafics
 router.patch('/:id', (req, res) => {
     let id = req.params.id;
-    const {termek, vevo,kategoriaId,egyeseg,mennyiseg,kiadva, nettoar } = req.body; // consistent naming
-    pool.query(`UPDATE forgalom SET termek=?,vevo = ?, kategoriaId=?, egyseg=?, mennyiseg=?, kiadva=?, nettoar=? WHERE id = ?`, [termek,vevo,kategoriaId,egyeseg,mennyiseg,kiadva, nettoar], (error, results) => {
+    const {termek, vevo,kategoriaId,egyseg,mennyiseg,kiadva, nettoar } = req.body; // consistent naming
+    pool.query(`UPDATE forgalom SET termek=?,vevo = ?, kategoriaId=?, egyseg=?, mennyiseg=?, kiadva=?, nettoar=? WHERE id = ?`, [termek,vevo,kategoriaId,egyseg,mennyiseg,kiadva, nettoar, id], (error, results) => {
       if (error) return res.status(500).json({ errno: error.errno, msg: "Hiba történt :(" });
       res.status(200).json({ message: "Forgalom updated", results });
     });

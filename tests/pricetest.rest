@@ -1,3 +1,15 @@
 ###get price list
 GET http://localhost:3000/price
 Accept: application/json
+
+###patch price by id
+PATCH http://localhost:3000/price/247
+Content-Type: application/json
+
+{
+    "nettoar": 500
+}
+
+###delete trade price by id
+DELETE http://localhost:3000/price/247
+Content-Type: application/json

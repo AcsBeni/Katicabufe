@@ -1,3 +1,23 @@
 ### Get buyers
 GET http://localhost:3000/buyers
 Content-Type: application/json
+
+### set all buyers for one product
+PATCH  http://localhost:3000/buyers/lajos
+Content-Type: application/json
+
+{
+    "vevo": "Lajos"
+}
+
+### delete buyer by name
+DELETE http://localhost:3000/buyers/lajos
+Content-Type: application/json
+
+### update buyer by id
+PATCH http://localhost:3000/buyers/247
+Content-Type: application/json
+
+{
+    "vevo": "lajos"
+}
