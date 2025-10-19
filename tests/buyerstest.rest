@@ -1,0 +1,3 @@
+### Get buyers
+GET http://localhost:3000/buyers
+Content-Type: application/json

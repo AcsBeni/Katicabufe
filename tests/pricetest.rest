@@ -1,0 +1,3 @@
+###get price list
+GET http://localhost:3000/price
+Accept: application/json

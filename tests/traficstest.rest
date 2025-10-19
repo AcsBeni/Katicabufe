@@ -44,3 +44,8 @@ Content-Type: application/json
     "mennyiseg":3,
     "kiadva":1
 }
+
+### Get trafics buyers
+
+GET http://localhost:3000/trafics/buyers
+Content-Type: application/json

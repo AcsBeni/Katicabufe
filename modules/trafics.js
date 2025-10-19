@@ -3,11 +3,13 @@ const router = express.Router();
 const pool = require('../utils/database');
 // Select all
 router.get('/', (req,res) => {
-    pool.query('SELECT * FROM forgalom INNER JOIN kategoria ON kategoria.id = forgalom.kategoriaId', (error, results) => {
+    pool.query('SELECT forgalom.id, forgalom.termek, forgalom.vevo, forgalom.kategoriaId, forgalom.egyseg, forgalom.nettoar, forgalom.mennyiseg, forgalom.kiadva, kategoria.categoryName FROM forgalom INNER JOIN kategoria ON kategoria.id = forgalom.kategoriaId', (error, results) => {
         if (error) return res.status(500).json({error: error.message})
         res.status(200).json(results)
       });
 })
+
+
 // Select one trafics by id
 router.get('/:id',(req, res)=>{
     let id = req.params.id;
@@ -45,6 +47,8 @@ router.delete('/:id',(req, res)=>{
         if(error) return res.status(500).json({errno: error.errno, msg: "Hiba történt :("}) ;
         res.status(200).json()})
 });
+
+
 module.exports = router
 
 

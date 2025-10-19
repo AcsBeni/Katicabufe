@@ -4,6 +4,9 @@ var cors = require('cors');
 const categories = require('./modules/categories');
 const trafics = require('./modules/trafics');
 const statistics = require('./modules/statistics')
+const product = require('./modules/product');
+const buyers = require('./modules/buyers');
+const price = require('./modules/price');
 
 const app = express();
 //npm i dotenv
@@ -29,6 +32,9 @@ app.get('/', (_req, res) => {
 app.use('/categories', categories);
 app.use('/trafics', trafics);
 app.use('/statistics', statistics)
+app.use('/product', product);
+app.use('/buyers', buyers);
+app.use('/price', price);
 
 /*
 app.get('/kategories', (req, res) => {
@@ -49,8 +55,8 @@ app.get('/trafics', (req, res) => {
 });
 */
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server listening on http://localhost:${process.env.PORT}`);
+app.listen(3000, () => {
+    console.log(`Server listening on http://localhost:3000`);//${process.env.PORT}
 });
 
 
