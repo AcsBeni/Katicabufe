@@ -1,6 +1,11 @@
+@host = http://localhost
+@port = 3000
+@url = {{host}}:{{port}}
+
+
 ###get kategories
 
-GET http://localhost:3000/categories
+GET {{url}}/categories
 Content-Type: application/json
 
 
@@ -8,17 +13,17 @@ Content-Type: application/json
 
 ### Get one kategory by id
 
-GET http://localhost:3000/categories/3
+GET {{url}}/categories/3
 Content-Type: application/json
 
 ### Delete one kategory by id
 
-DELETE http://localhost:3000/categories/4
+DELETE {{url}}/categories/4
 Content-Type: application/json
 
 ### Post kategories
 
-POST http://localhost:3000/categories
+POST{{url}}/categories
 Content-Type: application/json
 
 {

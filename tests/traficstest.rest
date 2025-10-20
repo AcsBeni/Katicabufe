@@ -1,23 +1,27 @@
+@host = http://localhost
+@port = 3000
+@url = {{host}}:{{port}}
+
 ###get traffiec
 
-GET http://localhost:3000/trafics
+GET {{url}}/trafics
 Content-Type: application/json
 
 
 
 ### Get one forgalom by id
 
-GET http://localhost:3000/trafics/247
+GET {{url}}/trafics/247
 Content-Type: application/json
 
 ### Delete one forgalom by id
 
-GET http://localhost:3000/trafics/3
+GET {{url}}/trafics/3
 Content-Type: application/json
 
 ### Post traific
 
-POST http://localhost:3000/trafics
+POST {{url}}/trafics
 Content-Type: application/json
 
 {
@@ -33,7 +37,7 @@ Content-Type: application/json
 
 ### Patch forgalom by id
 
-PATCH http://localhost:3000/trafics/247
+PATCH {{url}}/trafics/247
 Content-Type: application/json
 
 {
@@ -48,5 +52,5 @@ Content-Type: application/json
 
 ### Get trafics buyers
 
-GET http://localhost:3000/trafics/buyers
+GET {{url}}/trafics/buyers
 Content-Type: application/json

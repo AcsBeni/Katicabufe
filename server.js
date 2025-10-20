@@ -1,12 +1,17 @@
 const express = require('express');
 var cors = require('cors');
 
+
 const categories = require('./modules/categories');
 const trafics = require('./modules/trafics');
 const statistics = require('./modules/statistics')
 const product = require('./modules/product');
 const buyers = require('./modules/buyers');
 const price = require('./modules/price');
+const logger = require('./utils/logger');
+
+
+
 
 const app = express();
 //npm i dotenv
@@ -55,8 +60,9 @@ app.get('/trafics', (req, res) => {
 });
 */
 
-app.listen(3000, () => {
-    console.log(`Server listening on http://localhost:3000`);//${process.env.PORT}
+app.listen(process.env.PORT, () => {
+    
+    logger.info(`Server listening on ${process.env.PORT}`);//${process.env.PORT}
 });
 
 
