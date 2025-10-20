@@ -1,3 +1,24 @@
 ### Get product buyers
 GET http://localhost:3000/product
 Content-Type: application/json
+
+### Post new product
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+    "termek": "Fánk",
+    "kategoriaId": 2,
+    "egyseg" : "db" ,
+    "nettoar": 250
+}
+
+### Update product
+PATCH http://localhost:3000/product/1
+Content-Type: application/json
+
+{
+    "nev": "Túrós csusza",
+    "egyseg": "adag",
+    "ar": 1200
+}

@@ -38,6 +38,7 @@ router.patch('/:id', (req, res) => {
       if (error) return res.status(500).json({ errno: error.errno, msg: "Hiba történt :(" });
       res.status(200).json({ message: "Forgalom updated", results });
     });
+    
   });
 
 // Delete trafics
@@ -46,6 +47,7 @@ router.delete('/:id',(req, res)=>{
     pool.query(`DELETE FROM forgalom WHERE id=?`,[id], (error, results)=>{
         if(error) return res.status(500).json({errno: error.errno, msg: "Hiba történt :("}) ;
         res.status(200).json()})
+       
 });
 
 
