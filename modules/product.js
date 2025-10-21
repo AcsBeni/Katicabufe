@@ -22,26 +22,32 @@ router.get('/', (req,res) => {
     });
 })
 router.post('/', (req, res) => {
-    const { termek, kategoriaId, egyseg, nettoar } = req.body;
+    const { categoryID,nev,  egyseg,ar } = req.body;
     pool.query(`INSERT INTO termekek (categoryID, nev, egyseg, ar) 
-     VALUES (?, ?, ?, ?)`,[kategoriaId, termek, egyseg, nettoar], (error, results) => {
+     VALUES (?, ?, ?, ?)`,[categoryID, nev, egyseg,ar], (error, results) => {
         if (error) return res.status(500).json({ error: error.message });
         res.status(200).json(results);
     });
 });
 
-
+router.get('/:id', (req,res) => {
+    let id = req.params.id;
+    pool.query(`SELECT * FROM termekek WHERE termekID=?`,[id], (error, results)=>{
+        if(error) return res.status(500).json({errno: error.errno, msg: "Hiba történt :("}) ;
+        res.status(200).json(results)
+    })
+})
 router.patch('/:id', (req, res) => {
     let id = req.params.id;
-    const {nev, egyseg, ar } = req.body;
-    pool.query(`UPDATE termekek SET nev=?, egyseg=?, ar=? WHERE id = ?`, [nev,egyseg, ar, id], (error, results) => {
-        if (error) return res.status(500).json({ errno: error.errno, msg: "Hiba történt :(" });
+    const {nev, egyseg, categoryID, ar } = req.body;
+    pool.query(`UPDATE termekek SET nev=?, egyseg=?, categoryID=?, ar=? WHERE termekID =?`, [nev,egyseg,categoryID, ar, id], (error, results) => {
+        if (error) return res.status(500).json({ errno: error.errno, msg: "Hiba történt :(" +error });
         res.status(200).json({ message: "Termék updated", results });
     });
 });
 router.delete('/:id',(req, res)=>{
     let id = req.params.id;
-    pool.query(`DELETE FROM termekek WHERE id=?`,[id], (error, results)=>{
+    pool.query(`DELETE FROM termekek WHERE termekID=?`,[id], (error, results)=>{
         if(error) return res.status(500).json({errno: error.errno, msg: "Hiba történt :("}) ;
         res.status(200).json()}
 );});

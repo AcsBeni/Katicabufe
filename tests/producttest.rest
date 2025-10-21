@@ -2,15 +2,19 @@
 GET http://localhost:3000/product
 Content-Type: application/json
 
+###Get product by id
+GET http://localhost:3000/product/247
+Content-Type: application/json
+
 ### Post new product
 POST http://localhost:3000/product
 Content-Type: application/json
 
 {
-    "termek": "Fánk",
-    "kategoriaId": 2,
+    "nev": "Fánk",
+    "categoryID": 2,
     "egyseg" : "db" ,
-    "nettoar": 250
+    "ar": 250
 }
 
 ### Update product
@@ -19,6 +23,7 @@ Content-Type: application/json
 
 {
     "nev": "Túrós csusza",
+    "categoryID":2,
     "egyseg": "adag",
     "ar": 1200
 }
